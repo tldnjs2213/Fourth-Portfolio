@@ -1,0 +1,148 @@
+@import 'reset';
+@import 'mixin';
+@import 'variable';
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+main.mainContainer {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images//forest.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include displayFlexCol();
+	header.headerContainer {
+		width: 100%;
+		height: 20%;
+		@include displayFlexRow();
+		justify-content: flex-start;
+		h1.h1LogoTitle {
+			font-size: 4.2vw;
+			padding-left: 4vw;
+			position: relative;
+			color: $white;
+		}
+		h1.h1LogoTitle::before {
+			content: '';
+			position: absolute;
+			top: 54%;
+			right: -25vw;
+			width: 60%;
+			height: 0.1rem;
+			background-color: $white;
+		}
+	}
+	input::placeholder {
+		/* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: rgba($white, 0.9);
+	}
+	input.inputGetDecimalContainer {
+		width: 70%;
+		height: 25%;
+		@include displayFlexRow();
+		background-color: rgba($black, 0.7);
+		text-align: center;
+		font-size: 1.8vw;
+		color: $white;
+		font-weight: bold;
+	}
+	.divDecimalConverterContainer {
+		width: 70%;
+		height: 17%;
+		@include displayFlexRow();
+		font-size: 1.7vw;
+		color: $white;
+		font-weight: bold;
+		select {
+			cursor: pointer;
+			padding-left: 0.5vw;
+			border: 0.1rem solid $white;
+			margin: 0 0.8vw;
+			font-size: 1.7vw;
+			font-weight: bold;
+			color: $white;
+			border-radius: 0.2vw;
+			option {
+				font-size: 1.7vw;
+				color: $black;
+				font-weight: bold;
+				// background-color: rgba($black, 1);
+			}
+		}
+		button.buttonConvert {
+			font-size: 1.8vw;
+			margin-left: 0.8vw;
+			color: $white;
+			cursor: pointer;
+			border-radius: 0.5vw;
+			border: 0.1rem solid $white;
+			padding: 1vw 1.5vw;
+			font-weight: bold;
+			transition: all 300ms ease-in-out; // 250 ~ 350
+		}
+		button.buttonConvert:hover {
+			transform: scale(1.05);
+			background-color: rgba($black, 0.6);
+		}
+	}
+	input.inputPrintDecimalContainer {
+		width: 70%;
+		height: 25%;
+		@include displayFlexRow();
+		background-color: rgba($black, 0.7);
+		text-align: center;
+		font-size: 1.8vw;
+		color: $white;
+		font-weight: bold;
+	}
+	footer.footerContainer {
+		width: 100%;
+		height: 18%;
+		@include displayFlexRow();
+		font-size: 1.6vw;
+		// padding-bottom: 6%;
+		font-weight: bold;
+		.divPurpose {
+			color: $white;
+		}
+	}
+}
+
+.divModalContainer {
+	width: 50%;
+	height: 30%;
+	background-color: rgba($white, 0.9);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include displayFlexCol();
+
+	button.buttonCloseButton {
+		width: 4vw;
+		height: 6vh;
+		background-color: rgb(255, 0, 0);
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+
+		i.iconCloseButton {
+			color: $white;
+			// font-size: 2vw;
+		}
+	}
+
+	span.spanModalText {
+		// background-color: #bbb;
+		text-align: center;
+		font-size: 1.7vw;
+	}
+}

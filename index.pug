@@ -1,0 +1,33 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    . 
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    link(rel="stylesheet", href="./css/index.css")
+    script(src="./js/index.js" defer)
+    title Decimal Converter
+  body 
+    main.mainContainer 
+      header.headerContainer 
+        h1.h1LogoTitle Decimal Converter
+      input(type="text" maxlength="10" placeholder="input number...").inputGetDecimalContainer
+      .divDecimalConverterContainer 
+        select.selectFirstDecimalConverterContainer
+          option.optionFirstBinary(value="2진수") 2진수
+          option.optionFirstOctal(value="8진수") 8진수
+          option.optionFirstDecimal(value="10진수") 10진수
+          option.optionFirstHexaDecimal(value="16진수") 16진수
+        | 에서
+        select.selectSecondDecimalConverterContainer 
+          option.optionSecondBinary(value="2진수") 2진수
+          option.optionSecondOctal(value="8진수") 8진수
+          option.optionSecondDecimal(value="10진수") 10진수
+          option.optionSecondHexaDecimal(value="16진수") 16진수
+        | (으)로
+        button.buttonConvert 변환하기
+      input(type="text" placeholder="result number..." readonly).inputPrintDecimalContainer
+      footer.footerContainer 
+        .divPurpose 포트폴리오를 위하여 제작되었습니다.
